@@ -1,0 +1,30 @@
+{
+  "name": "wprestreader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/wpapi.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha -r mock-local-storage",
+    "build": "node_modules/.bin/webpack --config webpack.config.js"
+  },
+  "keywords": [
+    "Wordpress",
+    "WPREST",
+    "API"
+  ],
+  "author": "Luca Montanera (sidmonta)",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.16.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "mocha": "^3.5.0",
+    "mock-local-storage": "^1.0.4",
+    "should": "^13.0.1",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "webpack": "^3.5.6"
+  }
+}
