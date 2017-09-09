@@ -1,11 +1,11 @@
-# WPAPI
+# WP-SIMPLE-API-READER
 A simple javascript library for the WP-REST-API and ACF to REST API
 
 ## Installations
 For install in your project do
 
 ```bash
-npm install —save wpapi
+npm install —save wp-simple-api-reader
 ```
 
 ## Require
@@ -15,7 +15,7 @@ npm install —save wpapi
 
 ## Basic usage
 ```javascript
-import {WPReader, ACFReader} from 'wpapi';
+import {WPReader, ACFReader} from 'wp-simple-api-reader';
 
 const wpapi = new WPReader({'endpoint': 'http://localhost/headlessWP/'});
 

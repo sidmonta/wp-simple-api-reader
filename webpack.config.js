@@ -4,7 +4,7 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
   entry: './build.js',
   output: {
-    filename: 'wpapi.js',
+    filename: 'wp-simple-api-reader.js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
