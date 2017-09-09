@@ -109,7 +109,9 @@ describe('WP base API', () => {
         'id': 7
       });
 
-      Object.keys(result.data).should.containDeep(['id', 'count', 'description', 'link', 'name', 'slug', 'taxonomy', 'meta']);
+      Object.keys(result.data).should.containDeep([
+        'id', 'count', 'description', 'link', 'name', 'slug', 'taxonomy', 'meta'
+      ]);
     });
   });
 

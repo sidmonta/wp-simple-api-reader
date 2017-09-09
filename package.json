@@ -1,7 +1,7 @@
 {
-  "name": "wprestreader",
+  "name": "wpapi",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple javascript library for the WP-REST-API and ACF to REST API",
   "main": "./dist/wpapi.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha -r mock-local-storage",
@@ -13,7 +13,7 @@
     "API"
   ],
   "author": "Luca Montanera (sidmonta)",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.16.2"
   },

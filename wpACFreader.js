@@ -1,36 +1,60 @@
 import axios from 'axios';
 import WPReader from './wpreader';
 
+/**
+ *
+ */
 export default class ACFReader extends WPReader {
+  /**
+   *
+   * @param {Object} options
+   */
   constructor (options = {}) {
     super(options);
     this.settings.completeEndpoint = this.settings.endpoint +
       (!(this.settings.endpoint.endsWith('/')) ? '/' : '') + 'wp-json/acf/v3/';
   }
 
+  /**
+   *
+   */
   tags () {
     throw 'ACF for tags is not supported yet';
   }
 
+  /**
+   *
+   */
   taxonomies () {
     throw 'ACF for taxonomies is not supported yet';
   }
 
+  /**
+   *
+   */
   postTypes () {
     throw 'ACF for post types is not supported yet';
   }
 
+  /**
+   *
+   * @param {*} method
+   * @param {*} args
+   * @param {*} def
+   */
   _doRequest (method, args, def) {
 
-    let params = Object.assign({}, def, args);
 
     if (typeof args.id !== 'undefined') {
       method += '/' + args.id;
+      delete args.id;
     }
     if (typeof args.fielName !== 'undefined') {
       method += '/' + args.fielName;
+      delete args.fielName;
     }
 
+    let params = Object.assign({}, def, args);
     if (this.settings.debug) {
       console.log(`${this.settings.completeEndpoint}${method}/?${this._queryParams(params)}`, this.auth);
     }
@@ -50,5 +74,3 @@ export default class ACFReader extends WPReader {
     }
   }
 }
-
-module.exports = ACFReader;

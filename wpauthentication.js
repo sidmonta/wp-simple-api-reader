@@ -1,7 +1,14 @@
 import axios from 'axios';
 
+/**
+ *
+ */
 export default class WPAuth {
 
+  /**
+   *
+   * @param {Object} options
+   */
   constructor (options = {}) {
     this.endpoint = options.endpoint || '';
     this._token = '';
@@ -10,6 +17,12 @@ export default class WPAuth {
     this.loggedin = this._restoreToken();
   }
 
+  /**
+   *
+   * @param {*} username
+   * @param {*} password
+   * @param {*} callback
+   */
   async doAuth (username = '', password = '', callback = null) {
     const method = 'wp-json/jwt-auth/v1/token';
     let url = this.endpoint + (!(this.endpoint.endsWith('/')) ? '/' : '') + method;
@@ -47,22 +60,37 @@ export default class WPAuth {
     }
   }
 
+  /**
+   *
+   */
   get token () {
     return this._token;
   }
 
+  /**
+   *
+   */
   set token (t) {
     this._token = t;
   }
 
+  /**
+   *
+   */
   get data () {
     return this._data;
   }
 
+  /**
+   *
+   */
   set data (d) {
     this._data = d;
   }
 
+  /**
+   *
+   */
   _saveToken () {
     if (window.localStorage) {
       localStorage.setItem(`wptoken${this.endpoint}`, JSON.stringify({
@@ -74,6 +102,9 @@ export default class WPAuth {
     return false;
   }
 
+  /**
+   *
+   */
   _restoreToken () {
     if (window.localStorage) {
       let ret = JSON.parse(localStorage.getItem(`wptoken${this.endpoint}`));
@@ -85,6 +116,10 @@ export default class WPAuth {
     return (this._token !== '');
   }
 
+  /**
+   *
+   * @param {String} message
+   */
   static AuthException (message) {
     this.message = message;
     this.name = 'AuthException';
