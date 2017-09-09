@@ -5,7 +5,7 @@ A simple javascript library for the WP-REST-API and ACF to REST API
 For install in your project do
 
 ```bash
-npm install —save wprestreader
+npm install —save wpapi
 ```
 
 ## Require
@@ -15,7 +15,7 @@ npm install —save wprestreader
 
 ## Basic usage
 ```javascript
-import {WPReader, ACFReader} from 'wpapi.js';
+import {WPReader, ACFReader} from 'wpapi';
 
 const wpapi = new WPReader({'endpoint': 'http://localhost/headlessWP/'});
 
