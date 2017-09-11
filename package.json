@@ -1,8 +1,8 @@
 {
   "name": "wp-simple-api-reader",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A simple javascript library for the WP-REST-API and ACF to REST API",
-  "main": "./dist/wp-simple-api-reader.js",
+  "main": "build.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha -r mock-local-storage",
     "build": "node_modules/.bin/webpack --config webpack.config.js"
