@@ -1,6 +1,6 @@
 {
   "name": "wp-simple-api-reader",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple javascript library for the WP-REST-API and ACF to REST API",
   "main": "build.js",
   "scripts": {
