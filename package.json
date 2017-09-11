@@ -12,8 +12,12 @@
     "WPREST",
     "API"
   ],
-  "author": "Luca Montanera (sidmonta)",
+  "author": {
+    "name": "Luca Montanera (sidmonta)",
+    "email": "sidmonta.15@gmail.com"
+  },
   "license": "MIT",
+  "repository" : { "type" : "git", "url" : "https://github.com/sidmonta/wp-simple-api-reader.git"},
   "dependencies": {
     "axios": "^0.16.2"
   },
