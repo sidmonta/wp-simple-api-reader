@@ -5,7 +5,7 @@ A simple javascript library for the WP-REST-API and ACF to REST API
 For install in your project do
 
 ```bash
-npm install —save wp-simple-api-reader
+npm install --save wp-simple-api-reader
 ```
 
 ## Require
@@ -75,7 +75,8 @@ Set the param ```id``` for request single page with id
 * **taxonomies**: Implement the taxonomies's endpoint of the WP REST API. This method is invoce the param object, for the param see [Taxonomy Endpoint](https://developer.wordpress.org/rest-api/reference/taxonomies/).<br>
 Set the param ```id``` for request single taxonomy with slug
 * **media**: Implement the media’s endpoint of the WP REST API. This method is invoce the param object, for the param see [Media Endpoint](https://developer.wordpress.org/rest-api/reference/media/).<br>
-Set the param ```id``` for request single media with id
+* **comments**: Implement the comments’s endpoint of the WP REST API. This method is invoce the param object, for the param see [Comment Endpoint](https://developer.wordpress.org/rest-api/reference/comments/).<br>
+Set the param ```id``` for request single comment with id
 * **users**: Implement the users’s endpoint of the WP REST API. This method is invoce the param object, for the param see [User Endpoint](https://developer.wordpress.org/rest-api/reference/users/).<br>
 Set the param ```id``` for request single user with id
 * **postTypes**: Implement the post_types’s endpoint of the WP REST API. This method is invoce the param object, for the param see [Post Type Endpoint](https://developer.wordpress.org/rest-api/reference/post-types/).<br>
@@ -108,8 +109,14 @@ Set the param ```fieldName``` for request single ACF field with name.
 * **media**: Implement the media’s endpoint of the WP REST API. This method is invoce the param object, for the param see [Media Endpoint](https://developer.wordpress.org/rest-api/reference/media/).<br>
 Set the param ```id``` for request single media with id.<br>
 Set the param ```fieldName``` for request single ACF field with name.
+* **comments**: Implement the comments’s endpoint of the WP REST API. This method is invoce the param object, for the param see [Comment Endpoint](https://developer.wordpress.org/rest-api/reference/comments/).<br>
+Set the param ```id``` for request single comment with id.<br>
+Set the param ```fieldName``` for request single ACF field with name.
 * **users**: Implement the users’s endpoint of the WP REST API. This method is invoce the param object, for the param see [User Endpoint](https://developer.wordpress.org/rest-api/reference/users/).<br>
 Set the param ```id``` for request single user with id
+Set the param ```fieldName``` for request single ACF field with name.
+* **options**: Implement the options’s endpoint of the WP REST API. This method is invoce the param object.<br>
+Set the param ```id``` for request single post option with id.<br>
 Set the param ```fieldName``` for request single ACF field with name.
 * **doAuth**: If options ```auth``` is set to ```true``` this method make an authentication call that save a token in the localstorage. The params of the method are ```username, password, callback``` the ```callback``` is a function called after the token is storate.
 * **addCustomMethod**: Create a custom method for a custom endpoint in the Wordpress endpoint. The params are ```funName```: set a name of the function; ```method```: set a partial endpoint URL; ```baseEndpoint```: set a endpoint. Default 'wp-json/wp/v2/'

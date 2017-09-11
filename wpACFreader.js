@@ -36,6 +36,12 @@ export default class ACFReader extends WPReader {
     throw 'ACF for post types is not supported yet';
   }
 
+  async options (args = {}) {
+    let method = 'options';
+
+    return this._doRequest(method, args, {});
+  }
+
   /**
    *
    * @param {*} method
@@ -43,7 +49,6 @@ export default class ACFReader extends WPReader {
    * @param {*} def
    */
   _doRequest (method, args, def) {
-
 
     if (typeof args.id !== 'undefined') {
       method += '/' + args.id;

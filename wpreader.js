@@ -145,6 +145,16 @@ export default class WPReader {
         return this._doRequest(method, args, {'context': 'view'});
     }
 
+    async comments (args = {}) {
+        let method = 'comments';
+
+        const def = Object.assign({}, defaultArgument, {
+            'orderby': 'date_gmt'
+        });
+
+        return this._doRequest(method, args, def);
+    }
+
     /**
      * Make login to wordpress, this method register a token for the other request
      * @param {String} username username
