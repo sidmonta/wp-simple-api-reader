@@ -54,9 +54,9 @@ export default class ACFReader extends WPReader {
       method += '/' + args.id;
       delete args.id;
     }
-    if (typeof args.fielName !== 'undefined') {
-      method += '/' + args.fielName;
-      delete args.fielName;
+    if (typeof args.fieldName !== 'undefined') {
+      method += '/' + args.fieldName;
+      delete args.fieldName;
     }
 
     let params = Object.assign({}, def, args);
