@@ -23,7 +23,8 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
-    "babel-runtime": "^6.26.0"
+    "babel-runtime": "^6.26.0",
+    "growl": "^1.10.5"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
