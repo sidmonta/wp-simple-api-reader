@@ -2,7 +2,8 @@
 import WPReader from './wpreader';
 import ACFReader from './wpACFreader';
 
-export default {
+module.exports = {
   'WPReader': WPReader,
   'ACFReader': ACFReader
 };
+

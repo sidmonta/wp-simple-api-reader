@@ -22,7 +22,7 @@
     "url": "https://github.com/sidmonta/wp-simple-api-reader.git"
   },
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": "^0.18.0",
     "babel-runtime": "^6.26.0",
     "growl": "^1.10.5"
   },

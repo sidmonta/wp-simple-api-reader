@@ -1,8 +1,6 @@
 /* eslint-env node, mocha */
 const should = require('should');
-
-const WPReader = require('./wpreader');
-const ACFReader = require('./wpACFreader');
+const { WPReader, ACFReader } = require('./dist/wp-simple-api-reader');
 
 describe('WP base API', () => {
 
